@@ -7,7 +7,7 @@ Sample
   <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot1.png" width="100" />
   <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot2.png" /> 
 </p>
-![Alt Text](https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot1.png) ![Alt Text](https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot2.png) 
+
 
 # Root Gradle
 ```sh
