@@ -3,7 +3,7 @@
 This is simple library for creating textview expandable. Like **Continue or Less**. This library extended versiion **TextView**. Easy to use.
 
 Sample
-<p float="left">
+<p float="center">
   <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot1.png" width="100" />
   <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot2.png" width="100" /> 
 </p>
