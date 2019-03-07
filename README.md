@@ -4,8 +4,8 @@ This is simple library for creating textview expandable. Like **Continue or Less
 
 Sample
 <p align="center">
-  <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot1.png" width="100" height="400" />
-  <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot2.png" width="100" height="400" /> 
+  <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot1.png" width="400" height="400" />
+  <img src="https://github.com/mahimrocky/ShowMoreText/blob/master/screenshot2.png" width="400" height="400" /> 
 </p>
 
 
