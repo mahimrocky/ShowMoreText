@@ -47,12 +47,15 @@ public class ShowMoreTextView extends TextView {
 
     private String mainText;
 
+    private boolean isAlreadySet;
+
     public ShowMoreTextView(Context context) {
         super(context);
     }
 
     public ShowMoreTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+
     }
 
     @Override
@@ -62,12 +65,17 @@ public class ShowMoreTextView extends TextView {
         mainText = getText().toString();
     }
 
+
     private void addShowMore() {
         ViewTreeObserver vto = getViewTreeObserver();
         vto.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
                 String text = getText().toString();
+                if (!isAlreadySet) {
+                    mainText = getText().toString();
+                    isAlreadySet = true;
+                }
                 String showingText = "";
                 if (isCharEnable) {
                     if (showingChar >= text.length()) {
@@ -88,6 +96,7 @@ public class ShowMoreTextView extends TextView {
                             throw new Exception("Line Number cannot be exceed total line count");
                         } catch (Exception e) {
                             e.printStackTrace();
+                            Log.e(TAG, "Error: " + e.getMessage());
                         }
                         getViewTreeObserver().removeOnGlobalLayoutListener(this);
                         return;
@@ -132,7 +141,7 @@ public class ShowMoreTextView extends TextView {
                                         setMaxLines(Integer.MAX_VALUE);
                                         setText(mainText);
                                         showLessButton();
-                                        Log.d(TAG, "Item clicked: ");
+                                        Log.d(TAG, "Item clicked: " + mainText);
 
                                     }
                                 },
@@ -227,6 +236,7 @@ public class ShowMoreTextView extends TextView {
 
         isCharEnable = true;
         this.showingChar = character;
+
 
         addShowMore();
     }
