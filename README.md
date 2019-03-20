@@ -1,3 +1,6 @@
+[![Release](https://jitpack.io/v/mahimrocky/ShowMoreText.svg)]
+(https://jitpack.io/#mahimrocky/ShowMoreText)
+
 # ShowMoreText
 
 This is simple library for creating textview expandable. Like **Continue or Less**. This library extended versiion **TextView**. Easy to use.
