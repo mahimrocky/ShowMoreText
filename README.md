@@ -23,7 +23,7 @@ Sample
 
 ```sh
 dependencies {
-	   implementation 'com.github.mahimrocky:ShowMoreText:1.0.0'
+	   implementation 'com.github.mahimrocky:ShowMoreText:1.0.1'
 	}
 ```
 You have to use just this xml. You can modify or set color your own textView. **But don`t need to use maxLength or maxLine in text view. It may be confilict with library**.
