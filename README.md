@@ -38,7 +38,6 @@ You have to use just this xml. You can modify or set color your own textView. **
         android:layout_height="wrap_content"
         android:text="@string/text"
         />
-</android.support.constraint.ConstraintLayout>
 ```
 
 **So this part describe how you sort your text? You can sort your text by line number or character length**
