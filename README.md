@@ -1,5 +1,4 @@
-[![Release](https://jitpack.io/v/mahimrocky/ShowMoreText.svg)]
-(https://jitpack.io/#mahimrocky/ShowMoreText)
+[![Release](https://jitpack.io/v/mahimrocky/ShowMoreText.svg)](https://jitpack.io/#mahimrocky/ShowMoreText)
 
 # ShowMoreText
 
