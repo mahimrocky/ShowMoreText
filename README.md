@@ -1,4 +1,4 @@
-[![Release](https://jitpack.io/v/mahimrocky/ShowMoreText.svg)](https://jitpack.io/#mahimrocky/ShowMoreText)
+[![Release](https://jitpack.io/v/mahimrocky/ShowMoreText.svg)](https://github.com/mahimrocky/ShowMoreText/releases/tag/1.0.1)
 
 # ShowMoreText
 
