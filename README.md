@@ -1,4 +1,4 @@
-[![Release](https://jitpack.io/v/mahimrocky/ShowMoreText.svg)](https://github.com/mahimrocky/ShowMoreText/releases/tag/1.0.1)
+[![Release](https://jitpack.io/v/mahimrocky/ShowMoreText.svg)](https://github.com/mahimrocky/ShowMoreText/releases/tag/1.0.2)
 
 # ShowMoreText
 
@@ -25,7 +25,7 @@ Sample
 
 ```sh
 dependencies {
-	   implementation 'com.github.mahimrocky:ShowMoreText:1.0.1'
+	   implementation 'com.github.mahimrocky:ShowMoreText:1.0.2'
 	}
 ```
 You have to use just this xml. You can modify or set color your own textView. **But don`t need to use maxLength or maxLine in text view. It may be confilict with library**.

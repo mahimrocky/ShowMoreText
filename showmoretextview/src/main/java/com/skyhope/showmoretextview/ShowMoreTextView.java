@@ -2,6 +2,7 @@ package com.skyhope.showmoretextview;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.os.Parcelable;
 import android.support.annotation.Nullable;
 import android.text.Spannable;
 import android.text.SpannableString;
@@ -49,6 +50,7 @@ public class ShowMoreTextView extends TextView {
 
     private boolean isAlreadySet;
 
+
     public ShowMoreTextView(Context context) {
         super(context);
     }
@@ -65,6 +67,15 @@ public class ShowMoreTextView extends TextView {
         mainText = getText().toString();
     }
 
+    @Override
+    public Parcelable onSaveInstanceState() {
+        return super.onSaveInstanceState();
+    }
+
+    @Override
+    public void onRestoreInstanceState(Parcelable state) {
+        super.onRestoreInstanceState(state);
+    }
 
     private void addShowMore() {
         ViewTreeObserver vto = getViewTreeObserver();
@@ -87,6 +98,9 @@ public class ShowMoreTextView extends TextView {
                     }
                     String newText = text.substring(0, showingChar);
                     newText += dotdot + showMore;
+
+                    SaveState.isCollapse = true;
+
                     setText(newText);
                     Log.d(TAG, "Text: " + newText);
                 } else {
@@ -114,6 +128,8 @@ public class ShowMoreTextView extends TextView {
                     Log.d(TAG, "Text: " + showingText);
                     newText += dotdot + showMore;
 
+                    SaveState.isCollapse = true;
+
                     setText(newText);
                 }
 
@@ -140,6 +156,7 @@ public class ShowMoreTextView extends TextView {
                                     public void onClick(@Nullable View view) {
                                         setMaxLines(Integer.MAX_VALUE);
                                         setText(mainText);
+                                        SaveState.isCollapse = false;
                                         showLessButton();
                                         Log.d(TAG, "Item clicked: " + mainText);
 
@@ -215,8 +232,13 @@ public class ShowMoreTextView extends TextView {
 
         setMaxLines(showingLine);
 
+        if (SaveState.isCollapse) {
+            addShowMore();
+        } else {
+            setMaxLines(Integer.MAX_VALUE);
+            showLessButton();
+        }
 
-        addShowMore();
     }
 
     /**
@@ -237,8 +259,12 @@ public class ShowMoreTextView extends TextView {
         isCharEnable = true;
         this.showingChar = character;
 
-
-        addShowMore();
+        if (SaveState.isCollapse) {
+            addShowMore();
+        } else {
+            setMaxLines(Integer.MAX_VALUE);
+            showLessButton();
+        }
     }
 
     /**
